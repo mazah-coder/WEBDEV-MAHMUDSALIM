@@ -8,14 +8,11 @@
 </head>
 <body>
     @extends('layout.app')
+    @section('content')
 
-@section('content')
+<h1 class="mb-4">Data Santri</h1>
 
-<h1 class="mb-4">
-    Data Santri
-</h1>
-
-<a href="#" class="btn btn-primary mb-4">Tambah Santri</a>
+<a href="/santri/create" class="btn btn-primary mb-3">Tambah Santri</a>
 
 <div class="card">
 
@@ -30,6 +27,7 @@
             <div class="col"> Kelas</div>
 
             <div class="col">Alamat</div>
+            
 
         </div>
 
@@ -44,6 +42,16 @@
             <div class="col">{{ $santri->kelas }}</div>
 
             <div class="col">{{ $santri->alamat }}</div>
+            
+            <div>
+                <a href="/santri/{{ $santri->id }}" class="btn btn-info btn-sm">Edit</a>
+                <form action="/santri/{{ $santri->id }}" method="POST" dtyle="display:inline;">
+                    @csrf
+                    @method('DELETE')
+
+                <button class="btn btn-danger btn-sm">Hapus</button>
+                </form>
+            </div>
 
         </div>
 @endforeach

@@ -27,7 +27,7 @@
                 <label>Alamat</label>
                 <textarea name="alamat" class="form-control">{{$santri->alamat}}</textarea>
             </div>
-            <button class="btn btn-succes">Update</button>
+            <button type="submit" class="btn btn-primary">Update</button>
         </form>
     </div>
 @endsection

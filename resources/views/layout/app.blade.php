@@ -6,25 +6,25 @@
     <meta charset="UTF-8">
 
     <title>Pembayaran Santri</title>
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
 
 </head>
 
 <body>
-@yield('content')
+
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 
         <div class="container">
 
-            <a class="navbar-brand" href="#">Pembayaran Santri </a>
+            <a class="navbar-brand d- flex align-items-center"  href="#">
+                 <img src="{{ asset('img/logopondok.jpeg') }}" alt="Logo" width="40" height="40" class="me-2 rounded-circle">Pembayaran Santri</a>
 
             <div>
-                <a href="/home" class="btn btn-outline-light">Dashboard</a>
 
-                <a href="/santri" class="btn btn-outline-light">Data Santri</a>
-
-                <a href="#" class="btn btn-outline-light">Bayar Bulanan</a>
-
+                <a href="/santri"class="btn btn-outline-light">Dashboard</a>
+                <a href="/santri"class="btn btn-outline-light " >Data Santri</a>
+                <a href="#"class="btn btn-outline-light">Bayar Bulanan</a>
 
             </div>
 
@@ -32,6 +32,7 @@
 
     </nav>
 
+    {{-- Content --}}
     <div class="container mt-5">
 
         @yield('content')

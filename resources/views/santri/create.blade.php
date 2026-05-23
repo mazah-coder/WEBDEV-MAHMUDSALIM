@@ -21,14 +21,14 @@
             </div>
             <div class="mb-3">
                 <label>Kelas</label>
-                <input type="text" name="nama" class="form-control">
+                <input type="text" name="kelas" class="form-control">
             </div>
             <div class="mb-3">
                 <label>Alamat</label>
-                <txtarea name="alamat" class=form-control></textarea>
+                <textarea name="alamat" class="form-control"></textarea>
             </div>
 
-            <button class="btn btn-primary">Simpan</button>
+            <button type="submit"class="btn btn-primary">Simpan</button>
         </form>
 </div>
 
